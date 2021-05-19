@@ -1,10 +1,11 @@
 baseURL = "http://example.org"
 title = "Hugo Zdoc Theme"
-theme = "zdoc"
+theme = "hugo-theme-zdoc"
+themesdir = "../.."
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-hasCJKLanguage = false
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
 
 copyright = "&copy;{year}, All Rights Reserved"
 timeout = 10000
