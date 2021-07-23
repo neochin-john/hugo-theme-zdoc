@@ -1,5 +1,6 @@
 {{ $js := .Site.Data.lib.js }}
 {{ $css := .Site.Data.lib.css }}
+{{ $d3 := .Site.Data.lib.d3 }}
 
 {{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify }}
 <script defer src="{{ $getParents.RelPermalink }}"></script>
@@ -12,6 +13,106 @@
 {{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify }}
 <script defer src="{{ $fadeinout.RelPermalink }}"></script>
 
+{{ if in .Params.Libraries "d3" }}
+  <script defer src="{{ $d3.d3.url }}" integrity="{{ $d3.d3.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_hierarchy" }}
+  <script defer src="{{ $d3.d3_hierarchy.url }}" integrity="{{ $d3.d3_hierarchy.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_chord" }}
+  <script defer src="{{ $d3.d3_chord.url }}" integrity="{{ $d3.d3_chord.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_scale" }}
+  <script defer src="{{ $d3.d3_scale.url }}" integrity="{{ $d3.d3_scale.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_array" }}
+  <script defer src="{{ $d3.d3_array.url }}" integrity="{{ $d3.d3_array.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_time" }}
+  <script defer src="{{ $d3.d3_time.url }}" integrity="{{ $d3.d3_time.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_color" }}
+  <script defer src="{{ $d3.d3_color.url }}" integrity="{{ $d3.d3_color.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_interpolate" }}
+  <script defer src="{{ $d3.d3_interpolate.url }}" integrity="{{ $d3.d3_interpolate.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_format" }}
+  <script defer src="{{ $d3.d3_format.url }}" integrity="{{ $d3.d3_format.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_shape" }}
+  <script defer src="{{ $d3.d3_shape.url }}" integrity="{{ $d3.d3_shape.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_time_format" }}
+  <script defer src="{{ $d3.d3_time_format.url }}" integrity="{{ $d3.d3_time_format.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_geo" }}
+  <script defer src="{{ $d3.d3_geo.url }}" integrity="{{ $d3.d3_geo.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_path" }}
+  <script defer src="{{ $d3.d3_path.url }}" integrity="{{ $d3.d3_path.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_collection" }}
+  <script defer src="{{ $d3.d3_collection.url }}" integrity="{{ $d3.d3_collection.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_timer" }}
+  <script defer src="{{ $d3.d3_timer.url }}" integrity="{{ $d3.d3_timer.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_ease" }}
+  <script defer src="{{ $d3.d3_ease.url }}" integrity="{{ $d3.d3_ease.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_dispatch" }}
+  <script defer src="{{ $d3.d3_dispatch.url }}" integrity="{{ $d3.d3_dispatch.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_selection" }}
+  <script defer src="{{ $d3.d3_selection.url }}" integrity="{{ $d3.d3_selection.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_transition" }}
+  <script defer src="{{ $d3.d3_transition.url }}" integrity="{{ $d3.d3_transition.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_force" }}
+  <script defer src="{{ $d3.d3_force.url }}" integrity="{{ $d3.d3_force.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_quadtree" }}
+  <script defer src="{{ $d3.d3_quadtree.url }}" integrity="{{ $d3.d3_quadtree.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_dsv" }}
+  <script defer src="{{ $d3.d3_dsv.url }}" integrity="{{ $d3.d3_dsv.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_drag" }}
+  <script defer src="{{ $d3.d3_drag.url }}" integrity="{{ $d3.d3_drag.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_axis" }}
+  <script defer src="{{ $d3.d3_axis.url }}" integrity="{{ $d3.d3_axis.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_random" }}
+  <script defer src="{{ $d3.d3_random.url }}" integrity="{{ $d3.d3_random.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_scale_chromatic" }}
+  <script defer src="{{ $d3.d3_scale_chromatic.url }}" integrity="{{ $d3.d3_scale_chromatic.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_fetch" }}
+  <script defer src="{{ $d3.d3_fetch.url }}" integrity="{{ $d3.d3_fetch.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_voronoi" }}
+  <script defer src="{{ $d3.d3_voronoi.url }}" integrity="{{ $d3.d3_voronoi.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_brush" }}
+  <script defer src="{{ $d3.d3_brush.url }}" integrity="{{ $d3.d3_brush.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_zoom" }}
+  <script defer src="{{ $d3.d3_zoom.url }}" integrity="{{ $d3.d3_zoom.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_polygon" }}
+  <script defer src="{{ $d3.d3_polygon.url }}" integrity="{{ $d3.d3_polygon.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_contour" }}
+  <script defer src="{{ $d3.d3_contour.url }}" integrity="{{ $d3.d3_contour.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+{{ if in .Params.Libraries "d3_cloud" }}
+  <script defer src="{{ $d3.d3_cloud.url }}" integrity="{{ $d3.d3_cloud.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+
 {{ if in .Params.Libraries "mermaid" }}
 <script defer src="{{ $js.mermaid.url }}" integrity="{{ $js.mermaid.sri }}" crossorigin="anonymous"></script>
 {{ end }}
@@ -22,9 +123,22 @@
   <script defer src="{{ $js.katex_auto_render.url }}" integrity="{{ $js.katex_auto_render.sri }}" crossorigin="anonymous"></script>
 {{ end }}
 
+{{ if in .Params.Libraries "msc" }}
+  <script defer src="{{ $js.webfont.url }}"></script>
+  <script defer src="{{ $js.snap_svg.url }}"></script>
+  <script defer src="{{ $js.lodash.url }}" integrity="{{ $js.lodash.sri }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $js.sequence_diagram.url }}" integrity="{{ $js.sequence_diagram.sri }}" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ $css.sequence_diagram.url }}" integrity="{{ $css.sequence_diagram.sri }}" crossorigin="anonymous">
+{{ end }}
+
 {{ if in .Params.Libraries "flowchartjs" }}
   <script defer src="{{ $js.raphael.url }}" integrity="{{ $js.raphael.sri }}" crossorigin="anonymous"></script>
   <script defer src="{{ $js.flowchartjs.url }}" integrity="{{ $js.flowchartjs.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+
+{{ if in .Params.Libraries "wavedrom" }}
+<script defer src="{{ $js.wavedrom.url }}" integrity="{{ $js.wavedrom.sri }}" crossorigin="anonymous"></script>
+<script defer src="{{ $js.wavedrom_skin.url }}" integrity="{{ $js.wavedrom_skin.sri }}" crossorigin="anonymous"></script>
 {{ end }}
 
 {{ if in .Params.Libraries "viz" }}
@@ -200,6 +314,26 @@
     // =================================================================
 
 
+    // =========================== wavedrom ============================
+    if (lib && lib.includes('wavedrom')) {
+      var wavePrefix = "language-wave";
+      var index = 0;
+      var jsonContent = null;
+      
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + wavePrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('div');
+        var source = null;
+        node0.id = 'WaveDrom_Display_' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        WaveDrom.RenderWaveForm(index, source, "WaveDrom_Display_");
+        index += 1;
+      });
+    }
+    // =================================================================
     // ========================== viz diagram ==========================
     if (lib && lib.includes('viz')) {
       var vizPrefix = "language-viz-";
@@ -222,5 +356,27 @@
     }
     // =================================================================
     
+
+    // ====================== js-sequence-diagram ======================
+    if (lib && lib.includes('msc')) {
+      {{ $msc := .Site.Data.msc }}
+      var options = JSON.parse({{ $msc | jsonify }});
+      var jsonContent = null;
+
+      var index = 0;
+      var chartPrefix = "language-msc";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('div');
+        node0.id = 'msc' + index;
+        x.parentNode.insertBefore(node0, x);
+        var diagram = Diagram.parse(jsonContent);
+        diagram.drawSVG("msc" + index, options);
+        index += 1;
+      });
+    }
+    // =================================================================
   });
 </script>
